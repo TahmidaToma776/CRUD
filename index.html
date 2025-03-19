@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD with Tailwind & DaisyUI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="p-6 bg-gray-100">
+    <div class="max-w-3xl mx-auto bg-white shadow-lg rounded-lg p-6">
+        <h2 class="text-2xl font-bold mb-4">CRUD Application</h2>
+        
+        <div class="mb-4 space-y-2">
+            <input id="name" type="text" placeholder="Enter name" class="input input-bordered w-full" />
+            <input id="email" type="email" placeholder="Enter email" class="input input-bordered w-full" />
+            <input id="phone" type="tel" placeholder="Enter phone number" class="input input-bordered w-full" />
+            <input id="password" type="password" placeholder="Enter password" class="input input-bordered w-full" />
+            <button onclick="addRecord()" class="btn btn-primary mt-2 w-full">Add</button>
+        </div>
+        
+        <table class="table w-full">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="recordsTable">
+                <!-- Data will be inserted here dynamically -->
+            </tbody>
+        </table>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
